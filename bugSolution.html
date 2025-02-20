@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    const myObject = {myKey: 'myValue'};
+    // Correct way: convert the object to a string first
+    document.getElementById('myDiv').innerHTML = JSON.stringify(myObject); 
+  </script>
+</body>
+</html>
